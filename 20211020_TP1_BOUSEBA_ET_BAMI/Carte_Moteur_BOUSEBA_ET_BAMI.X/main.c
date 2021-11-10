@@ -26,7 +26,8 @@ InitOscillator();
 /****************************************************************************************************/
 InitIO();
 InitPWM();
-PWMSetSpeed(40);
+PWMSetSpeed(0,0);
+PWMSetSpeed(0,1);
 
 
 LED_BLANCHE = 1;
