@@ -7,5 +7,5 @@ float Min( float value , float value2 );
 float LimitToInterval ( float value , float lowLimit , float highLimit );
 float RadianToDegree ( float value );
 float DegreeToRadian ( float value );
-#endif /? TOOLBOX_H ?/
+#endif /* TOOLBOX_H */
 

@@ -12,6 +12,7 @@
 #include "IO.h"
 #include "timer.h"
 #include "PWM.h"
+#include "ADC.h"
 
 
 
@@ -28,9 +29,12 @@ InitIO();
 InitPWM();
 InitTimer23();
 InitTimer1();
-PWMSetSpeed(20,0);
-PWMSetSpeed(20,1);
-_T3Interrupt();
+InitADC1();
+
+/*
+PWMSetSpeed(0,MOTEUR_DROITE);
+PWMSetSpeed(0,MOTEUR_GAUCHE);
+*/
 
 LED_BLANCHE = 1;
 
