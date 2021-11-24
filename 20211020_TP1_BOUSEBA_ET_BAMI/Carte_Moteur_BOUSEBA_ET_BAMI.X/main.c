@@ -65,7 +65,7 @@ while(1){
         robotState.distanceTelemetreGauche = 34 / volts - 5;
     
         
-        if (ADCValue0 > 348)
+        if (robotState.distanceTelemetreDroit < 30)
         {
             LED_ORANGE = 1;
     }
@@ -74,7 +74,7 @@ while(1){
             LED_ORANGE = 0;
         
         }
-        if (ADCValue1 > 348)
+        if (robotState.distanceTelemetreCentre < 30)
         {
             LED_BLEUE = 1;
         }
@@ -82,7 +82,7 @@ while(1){
         {
             LED_BLEUE = 0;
         }
-        if (ADCValue2 > 348)
+        if (robotState.distanceTelemetreGauche < 30)
         {
             LED_BLANCHE = 1;
         }
