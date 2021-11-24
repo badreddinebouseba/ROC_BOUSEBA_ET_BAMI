@@ -47,6 +47,14 @@ LED_ORANGE = 1;
 /****************************************************************************************************/
 while(1){
     //LED_BLANCHE=!LED_BLANCHE;
-    
+    if ( ADCIsConversionFinished() == 1)
+    {
+        unsigned int * ADCresult = ADCGetResult();
+        float ADCValue0 = ADCresult[0];
+        float ADCValue1 = ADCresult[1];
+        float ADCValue2 = ADCresult[2];
+        ADCClearConversionFinishedFlag();
+    }
+    }
 } // fin main
-}
+
