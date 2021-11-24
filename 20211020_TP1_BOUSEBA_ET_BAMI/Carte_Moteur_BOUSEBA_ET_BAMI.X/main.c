@@ -36,11 +36,12 @@ PWMSetSpeed(0,MOTEUR_DROITE);
 PWMSetSpeed(0,MOTEUR_GAUCHE);
 */
 
-LED_BLANCHE = 1;
+/* LED_BLANCHE = 1;
 
 LED_BLEUE = 1;
 
 LED_ORANGE = 1;
+ */
 
 /****************************************************************************************************/
 // Boucle Principale
@@ -54,7 +55,35 @@ while(1){
         float ADCValue1 = ADCresult[1];
         float ADCValue2 = ADCresult[2];
         ADCClearConversionFinishedFlag();
+        if (ADCValue0 > 348)
+        {
+            LED_ORANGE = 1;
     }
+        else 
+        {
+            LED_ORANGE = 0;
+        
+        }
+        if (ADCValue1 > 348)
+        {
+            LED_BLEUE = 1;
+        }
+        else
+        {
+            LED_BLEUE = 0;
+        }
+        if (ADCValue2 > 348)
+        {
+            LED_BLANCHE = 1;
+        }
+        else
+        {
+            LED_BLANCHE = 0;
+        }
+        
+    }
+    
+    
     }
 } // fin main
 
