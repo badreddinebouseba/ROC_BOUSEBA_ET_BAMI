@@ -60,18 +60,18 @@ unsigned char toggle =0;
 // Interruption du timer 32 bits sur 2-3
 void __attribute__((interrupt, no_auto_psv)) _T3Interrupt (void) {
     IFS0bits.T3IF = 0; // Clear Timer3 Interrupt Flag
-     if (toggle == 0)
-    {
-        PWMSetSpeedConsigne(20, MOTEUR_DROITE);
-        PWMSetSpeedConsigne(20, MOTEUR_GAUCHE);
-        toggle = 1;
-    }
-    else
-    {
-        PWMSetSpeedConsigne(-20, MOTEUR_DROITE);
-        PWMSetSpeedConsigne(-20, MOTEUR_GAUCHE);
-        toggle = 0;
-        
+if (toggle == 0)
+ {
+     PWMSetSpeedConsigne(20, MOTEUR_DROITE);
+   PWMSetSpeedConsigne(20, MOTEUR_GAUCHE);
+    toggle = 1;
+ }
+ else
+ {
+    PWMSetSpeedConsigne(-20, MOTEUR_DROITE);
+   PWMSetSpeedConsigne(-20, MOTEUR_GAUCHE);
+      toggle = 0;
+  
     }
      
 }
