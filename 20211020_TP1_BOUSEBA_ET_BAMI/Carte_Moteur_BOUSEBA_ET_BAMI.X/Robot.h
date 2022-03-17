@@ -13,6 +13,8 @@ float acceleration;
 float distanceTelemetreDroit;
 float distanceTelemetreCentre;
 float distanceTelemetreGauche;
+float distanceTelemetreExDroit;
+float distanceTelemetreExGauche;
 
 };
 };
